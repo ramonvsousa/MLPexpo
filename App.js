@@ -1,19 +1,21 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
+import Header from './src/components/Header';
+import Posts from './src/components/Posts';
+import Tabbar from './src/components/Tabbar'
+
+const App = () => {
+  document.body.style.backgroundColor = "white";
+  document.body.style.paddingTop = 0;
+  document.body.style.paddingBottom = 0;
+  
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
+    <React.Fragment>
+      <Header />
+      <Posts />
+      <Tabbar />
+    </React.Fragment>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
